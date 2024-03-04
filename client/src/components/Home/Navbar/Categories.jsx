@@ -1,0 +1,45 @@
+import React, { useContext, useState } from 'react'
+import Styles from '../../../../src/styles/Home/Navbar/Categories.module.css'
+// import Laptop from '../../assets/Image/Laptop.jpg'
+// import Phone from '../../assets/Image/phone.jpg'
+// import Perfume from '../../assets/Image/Perfume.jpg'
+import { MyContext } from '../../../Context/MyContext'
+
+function Categories() {
+  const { myProducts, setmyProducts} = useContext(MyContext);
+  const [category, setCategory] = useState("")
+  async function GetItemByCategory(){
+    console.log(category)
+    let res =await fetch(`http://localhost:5000/Categories?category=${category}`)
+    res=await res.json()
+    setmyProducts(res)
+    console.log(res)
+  }
+
+  return (
+    <div className={Styles.Container}>
+      <div className={Styles.ImgContainer} onClick={()=>{
+        setCategory("laptops")
+        GetItemByCategory()
+        }}>
+        {/* <img src={Laptop} alt="Laptop" /> */}
+        <h1>Laptops</h1>
+      </div>
+      <div className={Styles.ImgContainer}onClick={()=>{
+        setCategory("smartphones")
+        GetItemByCategory()
+        }}>
+        {/* <img src={Phone} alt="Phone" /> */}
+        <h1>Smartphones</h1>
+      </div>
+      <div className={Styles.ImgContainer}onClick={()=>{
+        setCategory("fragrances")
+        GetItemByCategory()
+        }}>
+        {/* <img src={Perfume}alt="Perfume" /> */}
+        <h1>Perfume</h1>
+      </div>
+    </div>
+  )
+}
+export default Categories;

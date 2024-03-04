@@ -1,0 +1,96 @@
+
+* {
+    margin: 0%;
+    padding: 0%;
+
+}
+
+.Container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+.navbar {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Heading {
+    text-align: start;
+    padding-left: 5%;
+    font-size: 30px;
+    font-family:sans-serif;
+    font-weight: 200;
+    color: black;
+    cursor: pointer;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar li a {
+    padding-right: 60px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    font-family: sans-serif;
+}
+
+.main{
+    height:40%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around   ;
+    background-color: black;
+}
+
+.image{
+    width: 12%;
+    height: 70%;
+    margin-top: 3%;
+    cursor: pointer;
+}
+
+#leftImage{
+    margin-left: 10%;
+}
+#RightImage{
+    margin-right: 10%;
+}
+
+.searchContainer{
+    height: 100%;
+    width: 50%;  
+}
+
+.helpHeading{
+    text-align: center;
+    padding-top: 10%;
+    color: white;
+    cursor: pointer;
+}
+
+.HelpInput{
+    height: 11%;
+    width: 80%;
+    padding-top: 10px;
+}
+
+.LabelContainer{
+    width: 10%;
+    height: 10%;
+    background-color: aqua;
+}
+
+/* .Searchlabel{
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: brown;
+} */

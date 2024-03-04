@@ -1,0 +1,28 @@
+ @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@1,6..12,300&family=PT+Sans&display=swap');
+
+ * {
+     margin: 0%;
+     padding: 0%;
+     box-sizing: border-box;
+ }
+
+ .Container {
+     height: 380px;
+     width: 100%;
+     position: absolute;
+     bottom: 0;
+     z-index: 9999;
+     transition: 1 ease;
+     background-color:blue;
+     z-index: 9999;
+ }
+
+ .Container li {
+     list-style: none;
+     font-size: 1.1rem;
+     font-family: 'Nunito Sans', sans-serif, 'PT Sans', sans-serif;
+     cursor: pointer;
+     margin-top: 10px;
+     padding-inline: 8px;
+     height: 100px;
+ }

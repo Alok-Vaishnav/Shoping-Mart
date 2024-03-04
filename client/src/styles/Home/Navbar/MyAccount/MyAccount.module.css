@@ -1,0 +1,57 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.Container {
+    height: 450px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 9999;
+    transition: 1s ease-out;
+    background-color: white;
+}
+
+.HeadingContainer{
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    border-bottom: 2px solid #7171713f;
+}
+
+.Heading{
+    font-size: 35px;
+    font-family:sans-serif;
+    font-weight: 100;
+    padding-top: 30px;
+    padding-left: 80px;
+}
+
+.UserContainer{
+    height: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 22%;
+}
+
+.ProfileContainer{
+    height: 100%;
+    width: 30%;
+    border-right: 2px solid #7171713f;
+    display: flex;
+    flex-direction: column;
+}
+
+.Profile,.Order{
+    height: 80px;
+    width: 100%;
+    border-bottom: 2px solid #7171713f;
+}
+
+.Profile:active{
+    background-color: aqua  ;
+}
