@@ -16,20 +16,18 @@ function App() {
     <>
       <Context>
         <div className="App">
-          {/* <BrowserRouter> */}
-            <ToastContainer />
-            <Routes>
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/" element={<Home />} />
-              <Route path="/Categories" element={<Categories />} />
-              <Route path="/Support" element={<Support/>}/>
-              <Route path="/Profile"element={<Profile/>}/>
-            </Routes>
-          {/* </BrowserRouter> */}
+          <ToastContainer />
+          <Routes>
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/Profile" element={<Profile />} />
+            {/* <Route path="/categories" element={<Categories />} /> */}
+          </Routes>
         </div>
       </Context>
-      <Product/>
+      <Product />
     </>
   );
 }

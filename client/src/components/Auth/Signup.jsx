@@ -21,7 +21,6 @@ function Signup() {
       Navigate("/")
     }
   }, [])
-
   const getsignup = async (data, e) => {
     e.preventDefault()
     let user = await fetch("http://localhost:5000/signup", {

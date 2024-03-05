@@ -12,7 +12,7 @@ function Login() {
   useEffect(() => {
     const auth = localStorage.getItem("User");
     if (auth) {
-      Navigate("/")
+      Navigate("/home")
     }
 
   }, [])
@@ -32,6 +32,7 @@ function Login() {
     if (!user.status) {
       toast.warn(user.message)
     } else {
+      toast.warn("WelCome User")
       localStorage.setItem("User", JSON.stringify(user.user))
       Navigate("/")
 

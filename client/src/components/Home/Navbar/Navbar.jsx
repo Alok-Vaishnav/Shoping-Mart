@@ -6,9 +6,11 @@ import { MyContext } from '../../../Context/MyContext';
 import Cart from "../../../../src/assets/cart.svg"
 
 function Navbar() {
-    const { setIsCategory, setIsMyaccount, setmyProducts, notfound, setnotfound } = useContext(MyContext);
-    const [search, setSearch] = useState("")
-    const navigate=useNavigate()
+    const { setIsCategory, setIsMyaccount, setmyProducts, notfound, setnotfound }= useContext(MyContext);
+    const [search, setSearch] = useState("");
+    const navigate = useNavigate();
+   
+
     // useEffect(() => {
     //     const auth = localStorage.getItem("User");
     //     if (!auth) {
