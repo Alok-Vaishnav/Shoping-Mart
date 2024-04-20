@@ -9,7 +9,7 @@
     position: absolute;
     bottom: 0;
     z-index: 9999;
-    transition: 1s ease-out;
+    transition: 2s ease-in;
     background-color: white;
 }
 
@@ -71,6 +71,9 @@
     margin-left: 50px;
 }
 
+.Profile:last-child{
+    background-color: aqua;
+}
 .Order a{
     text-align: center;
     text-decoration: none;

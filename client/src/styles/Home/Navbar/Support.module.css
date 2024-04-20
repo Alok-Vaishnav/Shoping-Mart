@@ -66,7 +66,7 @@
 
 .searchContainer{
     height: 100%;
-    width: 50%;  
+    width: 50%;
 }
 
 .helpHeading{
@@ -77,20 +77,29 @@
 }
 
 .HelpInput{
-    height: 11%;
-    width: 80%;
-    padding-top: 10px;
+    height: 12%;
+    width: 90%;
+    padding: 10px;
+    position: relative;
+    left:12%;
+    font-size: 20px;
 }
-
 .LabelContainer{
-    width: 10%;
-    height: 10%;
-    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12%;
+    height: 12%;
+    position: relative;
+    top: 12%;
+    background-color: #f15b5d;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
-/* .Searchlabel{
-    padding-left: 25px;
-    padding-top: 5px;
-    padding-bottom: 10px;
-    background-color: brown;
-} */
+.Searchlabel{
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    cursor: pointer;
+}

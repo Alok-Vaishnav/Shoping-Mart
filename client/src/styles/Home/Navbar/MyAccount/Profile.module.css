@@ -11,7 +11,6 @@
      bottom: 0;
      margin-left: 30%;
      z-index: 9999;
-     /* background-color:wheat; */
      display: flex;
      flex-direction: column;
  }
@@ -31,4 +30,20 @@
     font-size: 50px;
     margin-top: 50px;
     margin-left: 250px;
+ }
+
+ .userName{
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 200;
+ }
+
+.userEmail{
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 200;
  }

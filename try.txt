@@ -3,7 +3,7 @@ import Styles from '../../../../src/styles/Home/Navbar/Categories.module.css'
 // import Laptop from '../../assets/Image/Laptop.jpg'
 // import Phone from '../../assets/Image/phone.jpg'
 // import Perfume from '../../assets/Image/Perfume.jpg'
-import { MyContext } from '../../../Context/MyContext'
+import { MyContext } from '../../Context/MyContext'
 
 function Categories() {
   const { myProducts, setmyProducts} = useContext(MyContext);

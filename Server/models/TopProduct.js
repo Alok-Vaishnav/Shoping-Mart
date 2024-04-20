@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const ProductSchema = new mongoose.Schema({
+const TopProductSchema = new mongoose.Schema({
     id: {
         type:String,
         require:true,
@@ -18,4 +18,4 @@ const ProductSchema = new mongoose.Schema({
     thumbnail: String,
     images:Array
 });
-export default  mongoose.model("Product", ProductSchema);
+export default  mongoose.model("topproducts", TopProductSchema);

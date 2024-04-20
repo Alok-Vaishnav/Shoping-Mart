@@ -33,7 +33,7 @@ function Login() {
       toast.warn(user.message)
     } else {
       toast.warn("WelCome User")
-      localStorage.setItem("User", JSON.stringify(user.user))
+      localStorage.setItem("User", JSON.stringify(user))
       Navigate("/")
 
     }

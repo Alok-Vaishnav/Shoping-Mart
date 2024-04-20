@@ -41,7 +41,7 @@ function Signup() {
       toast.warn(user.message)
     } else {
 
-      localStorage.setItem("User", JSON.stringify(user._id))
+      localStorage.setItem("User", JSON.stringify(user))
       Navigate("/")
 
     }

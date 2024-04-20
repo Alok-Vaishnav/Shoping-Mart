@@ -31,13 +31,14 @@ export default function Support() {
                         className={Styles.helpHeading}>
                         Hey, how can we help you?
                     </h1>
+
                     <div className={Styles.LabelContainer}>
                         <label className={Styles.Searchlabel}>Search</label>
                     </div>
+                    
                     <input
                         className={Styles.HelpInput}
                         type="search" />
-
                 </div>
 
                 <img

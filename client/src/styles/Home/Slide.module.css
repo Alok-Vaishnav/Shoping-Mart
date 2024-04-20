@@ -4,18 +4,13 @@
     box-sizing: border-box;
 }
 
-.container{
+.Container{
     height: 650px;
-    width: 100%;
-    border-top: 2px solid gray;
-}
-
-.ImageContainer{
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
     position: relative;
+    border-top: 2px solid gray;
 }
 
 .SlidePanel{

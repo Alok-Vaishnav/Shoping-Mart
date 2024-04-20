@@ -19,8 +19,7 @@ export default function MyAccount() {
       setIsOrder(false)
     }}>
     <div
-      className={Styles.Container}
-      >
+      className={Styles.Container}>
       <div
         className={Styles.HeadingContainer}>
         <h1 className={Styles.Heading}>Your Account</h1>

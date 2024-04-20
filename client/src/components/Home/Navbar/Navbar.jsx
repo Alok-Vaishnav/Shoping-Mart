@@ -6,10 +6,10 @@ import { MyContext } from '../../../Context/MyContext';
 import Cart from "../../../../src/assets/cart.svg"
 
 function Navbar() {
-    const { setIsCategory, setIsMyaccount, setmyProducts, notfound, setnotfound }= useContext(MyContext);
+    const { setIsCategory, setIsMyaccount, setmyProducts, notfound, setnotfound } = useContext(MyContext);
     const [search, setSearch] = useState("");
     const navigate = useNavigate();
-   
+
 
     // useEffect(() => {
     //     const auth = localStorage.getItem("User");
@@ -48,9 +48,7 @@ function Navbar() {
                 <ul className={Styles.navul}>
 
                     <li className={Styles.Categories}>
-                        <Link
-
-                            onClick={() => setIsCategory(p => !p)}>
+                        <Link>
                             Categories
                         </Link>
                     </li>
@@ -62,6 +60,7 @@ function Navbar() {
                 </ul>
 
                 <input type="search" className={Styles.Search} placeholder='Search Product' />
+
                 <li
                     className={Styles.Profile}>
                     <Link>

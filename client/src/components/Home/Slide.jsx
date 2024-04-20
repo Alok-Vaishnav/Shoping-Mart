@@ -28,7 +28,7 @@ export default function Slide() {
 
     return (
         <div className={Style.container}>
-            <div className={Style.ImageContainer}>
+            <div className={Style.Container}>
                 <div className={Style.prev}
                     onClick={handlePrev}>
                     <i className="fa-solid fa-chevron-left"></i>
