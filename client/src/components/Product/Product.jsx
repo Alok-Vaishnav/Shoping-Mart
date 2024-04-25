@@ -1,23 +1,24 @@
 import React, { useContext, useEffect, useState } from 'react';
-import ProductCard from './ProductCard';
+import ProductCard from './ProductCard'
 import { MyContext } from '../../Context/MyContext';
 import Styles from '../../styles/Product/ProductCard.module.css';
+;
 
-function TopProduct() {
+function Product() {
 
   const { notfound } = useContext(MyContext);
-  const [topProducts, setTopProducts] = useState([])
+  const [myProducts, setMyProducts] = useState([])
 
-  async function getTopProducts() {
+  async function getAllProducts() {
     try {
-      let response = await fetch("http://localhost:5000/products/topproducts")
+      let response = await fetch("http://localhost:5000/products/allProducts")
       
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
       else {
-        let TopProducts = await response.json();
-        setTopProducts(TopProducts);
+        let AllProducts = await response.json();
+        setMyProducts(AllProducts);
       }
 
     } catch (error) {
@@ -26,18 +27,18 @@ function TopProduct() {
   }
 
   useEffect(() => {
-    getTopProducts();
+    getAllProducts();
   }, [notfound]);
 
 
-  // useEffect(() => {
-  //   console.log("myProducts:", myProducts);
-  // }, [myProducts]);
+  useEffect(() => {
+    console.log("myProducts:", myProducts);
+  }, [myProducts]);
 
 
   return (
     <div className={Styles.MapContainer}>
-      {topProducts && topProducts.map((product) => (
+      {myProducts && myProducts.map((product) => (
         <ProductCard
           key={product.id}
           thumbnail={product.thumbnail}
@@ -52,4 +53,4 @@ function TopProduct() {
   );
 }
 
-export default  TopProduct;
+export default  Product;

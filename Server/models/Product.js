@@ -18,4 +18,4 @@ const ProductSchema = new mongoose.Schema({
     thumbnail: String,
     images:Array
 });
-export default  mongoose.model("products ", ProductSchema);
+export default  mongoose.model("allproducts", ProductSchema);

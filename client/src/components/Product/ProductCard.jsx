@@ -1,6 +1,6 @@
 import React from 'react'
 import Styles from '../../styles/Product/ProductCard.module.css';
-function Card(product) {
+function ProductCard(product) {
   return (
     <div className={Styles.container}>
       <div className={Styles.imageContainer}>
@@ -14,8 +14,8 @@ function Card(product) {
         {/* <h1>detail: {myProducts.description.slice(0,30)+"..."}</h1> */}
       </div>
       
-      <button className={Styles.btn}>Card</button>
+      <button className={Styles.btn}>Cart</button>
     </div>
   )
 }
-export default Card;
+export default ProductCard;

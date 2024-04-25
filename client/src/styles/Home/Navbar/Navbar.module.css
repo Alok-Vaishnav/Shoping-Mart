@@ -58,22 +58,37 @@
     /* border-bottom: 2px solid white; */
 }
 
+
+.searchContainer{
+    height: 100%;
+    width: 40%; 
+}
+
+
 .Search {
-    height: 80%;
-    width: 40%;
+    height: 100%;
+    width: 90%;
     border: none;
     border-radius: 20px;
     font-size: 20px;
     padding-left: 1%;
-    margin-top: 5px;
-    margin-right: 10%;
 }
+
+
 
 .Search::placeholder {
     color: black;
     font-size: 1.1rem;
     font-weight: normal;
 }
+
+.searchIcon{
+    margin-right: 30px;
+    height: 30px;
+    width: 20px;
+    background-color: aqua;
+}
+
 
 
 .Profile {

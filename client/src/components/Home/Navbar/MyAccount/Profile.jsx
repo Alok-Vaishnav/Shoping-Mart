@@ -12,7 +12,7 @@ function Profile() {
 
   function logout() {
     localStorage.clear(auth);
-    navigate("/signup")
+    navigate("/")
 
   }
   return (

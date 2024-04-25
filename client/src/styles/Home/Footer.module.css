@@ -7,7 +7,7 @@
     height: 100px;
     width: 100%;
     position: relative;
-    top: 100%;
+    bottom: 0%;
     border-top: 2px solid #7171714f;
 }
 

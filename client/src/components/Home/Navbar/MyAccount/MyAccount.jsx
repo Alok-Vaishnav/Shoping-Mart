@@ -8,9 +8,9 @@ export default function MyAccount() {
   const { setIsProfile, setIsOrder, setIsMyaccount } = useContext(MyContext);
   const clickRef = useRef("");
 
-  useClickAway(clickRef, () => {
-    setIsMyaccount(false)
-  });
+  // useClickAway(clickRef, () => {
+  //   setIsMyaccount(false)
+  // });
 
   return (
     <ClickAwayListener onClickAway={()=>{

@@ -1,8 +1,21 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import Styles from "../../../styles/Home/Navbar/Support.module.css"
 import Img from "../../../../src/assets/Image/Styles.jpg"
 export default function Support() {
+
+
+    // const navigate = useNavigate();
+
+
+    // useEffect(() => {
+    //     const auth = localStorage.getItem("User");
+    //     if (!auth) {
+
+    //         navigate("/signup")
+    //     }
+    // }, [])
+
     return (
         <div className={Styles.Container}>
             <nav className={Styles.navbar}>
