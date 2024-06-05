@@ -6,8 +6,8 @@
 .Footer{
     height: 100px;
     width: 100%;
-    position: relative;
-    bottom: 0%;
+    position: absolute;
+    top: 100%;
     border-top: 2px solid #7171714f;
 }
 

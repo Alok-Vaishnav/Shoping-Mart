@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import Styles from "../../../../styles/Home/Navbar/MyAccount/Order.module.css"
+import Styles from "../../../styles/Home/MyAccount/Order.module.css"
 import ClickAwayListener from 'react-click-away-listener';
-import { MyContext } from '../../../.././Context/MyContext';
+import { MyContext } from '../../../context/MyContext';
 
 export default function Order() {
   const { setIsOrder } = useContext(MyContext);

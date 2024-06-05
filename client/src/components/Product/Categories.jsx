@@ -1,7 +1,6 @@
 import React from 'react'
 import Styles from "../../styles/Product/Categories.module.css"
 import iPhone from '../../assets/Image/Phone.jpg'
-import Laptop from '../../assets/Image/Laptop.jpg'
 
 
 export default function Categories() {

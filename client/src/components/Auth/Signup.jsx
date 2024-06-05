@@ -1,18 +1,18 @@
-import { React, useContext, useEffect, useState } from 'react'
+import { React, useContext, useEffect} from 'react'
 import Styles from "../../styles/Auth/Signup.module.css"
-import { Link, useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ClickAwayListener from 'react-click-away-listener';
-import { MyContext } from '../../Context/MyContext';
-import Login from "../Auth/Login"
+import { MyContext } from '../../context/MyContext';
+
 
 
 
 function Signup() {
 
-  const { setIsSignup, setIsMyaccount } = useContext(MyContext);
+  const { setIsSignup, setIsMyaccount} = useContext(MyContext);
 
 
 
@@ -24,34 +24,37 @@ function Signup() {
 
   const Navigate = useNavigate()
 
+  
+
   useEffect(() => {
     const auth = localStorage.getItem("User");
     if (auth) {
       Navigate("/")
     }
-  }, [])
+  })
+
   const getsignup = async (data, e) => {
     e.preventDefault()
-    let user = await fetch("http://localhost:5000/auth/signup", {
+    let user = await fetch(`${process.env.REACT_APP_SERVER_PORT}/auth/signup`, {
       method: "post",
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        firstname: data.firstname,
+        fullname: data.fullname,
         email: data.email,
         password: data.password
       })
     });
+    
     user = await user.json()
     console.log(user)
     if (user.message) {
       toast.warn(user.message)
     } else {
 
-      localStorage.setItem("User", JSON.stringify(user))
-      Navigate("/")
-
+      localStorage.setItem("User", JSON.stringify(user));
+      Navigate("/");
     }
   }
 
@@ -59,7 +62,6 @@ function Signup() {
 
     <ClickAwayListener onClickAway={() => {
       setIsMyaccount(false)
-      setIsSignup(false)
     }}>
 
       <div className={Styles.container}>
@@ -95,11 +97,19 @@ function Signup() {
           <button className={Styles.btn} type='submit'>Create Account</button>
 
           <h1 className={Styles.login}>
-            I have an Account
-            <li className={Styles.ok}>Login</li>
+            Have a Account
+            <li onClick={() => {
+              setIsSignup(false)
+            }}
+            >
+              Login!!
+            </li>
           </h1>
 
+
         </form>
+
+
       </div>
 
     </ClickAwayListener>

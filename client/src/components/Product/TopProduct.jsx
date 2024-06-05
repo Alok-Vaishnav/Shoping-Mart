@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import ProductCard from './ProductCard';
-import { MyContext } from '../../Context/MyContext';
+import { MyContext } from '../../context/MyContext';
 import Styles from '../../styles/Product/ProductCard.module.css';
 
 function TopProduct() {
@@ -10,7 +10,7 @@ function TopProduct() {
 
   async function getTopProducts() {
     try {
-      let response = await fetch("http://localhost:5000/products/topproducts")
+      let response = await fetch(`${process.env.REACT_APP_SERVER_PORT}/products/topproducts`)
       
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);

@@ -1,10 +1,12 @@
 import express from "express";
 import connentTOdb from "./config/config.js";
 import cors from "cors";
+import dotenv from "dotenv";
 import Auth from "./Routes/Auth.js"
 import Products from "./Routes/Product.js"
 
-
+dotenv.config();
+const port = process.env.REACT_APP_SERVER_PORT;
 
 try {
   const app = express();
@@ -24,7 +26,8 @@ try {
     res.send("healthy");
   });
 
-  app.listen(5000, () => console.log("Server started"));
+  app.listen(port, () => console.log("Server started" ,{port}));
+    
 } catch (error) {
   console.log(error);
 }

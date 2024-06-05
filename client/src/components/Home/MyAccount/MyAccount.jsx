@@ -1,16 +1,12 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
-import { useClickAway } from "use-click-away";
-import Styles from "../../../../styles/Home/Navbar/MyAccount/MyAccount.module.css";
+import React, { useContext } from 'react'
+import Styles from "../../../styles/Home/MyAccount/MyAccount.module.css";
 import { Link } from 'react-router-dom';
-import { MyContext } from '../../../.././Context/MyContext';
+import { MyContext } from '../../../context/MyContext';
 import ClickAwayListener from 'react-click-away-listener';
 export default function MyAccount() {
-  const { setIsProfile, setIsOrder, setIsMyaccount } = useContext(MyContext);
-  const clickRef = useRef("");
 
-  // useClickAway(clickRef, () => {
-  //   setIsMyaccount(false)
-  // });
+  const { setIsProfile, setIsOrder, setIsMyaccount } = useContext(MyContext);
+  
 
   return (
     <ClickAwayListener onClickAway={()=>{

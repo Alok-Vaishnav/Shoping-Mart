@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
-import Styles from "../../../styles/Home/Navbar/Support.module.css"
-import Img from "../../../../src/assets/Image/Styles.jpg"
+import React from 'react'
+import { Link} from 'react-router-dom';
+import Styles from "../styles/Pages/Support.module.css"
+import Img from "../assets/Image/Styles.jpg"
+
 export default function Support() {
 
 

@@ -1,17 +1,18 @@
 import React, { useContext, useEffect, useState } from 'react';
 import ProductCard from './ProductCard'
-import { MyContext } from '../../Context/MyContext';
+
 import Styles from '../../styles/Product/ProductCard.module.css';
 ;
 
 function Product() {
 
-  const { notfound } = useContext(MyContext);
+  
   const [myProducts, setMyProducts] = useState([])
+  const [notfound, setnotfound] = useState(false)
 
   async function getAllProducts() {
     try {
-      let response = await fetch("http://localhost:5000/products/allProducts")
+      let response = await fetch(`${process.env.REACT_APP_SERVER_PORT}/products/allProducts`)
       
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);

@@ -1,8 +1,10 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
     box-sizing: border-box;
 }
+
+
 .container {
     height: 603px;
     width: 500px;
@@ -12,7 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 247, 247, 0.173);
     z-index: 99999;
     cursor: pointer;
 }
@@ -20,9 +21,9 @@
 .heading {
     font-size: 2rem;
     line-height: 24px;
+    padding: 30px;
     text-align: center;
 }
-
 .Formcontainer {
     display: flex;
     justify-content: center;
@@ -80,15 +81,19 @@ input::placeholder {
     background: rgb(247, 210, 216);
 }
 
-.forget {
+.login {
+    display: flex;
+    justify-content: center;
     list-style: none;
     color: black;
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
-    padding: 10px;
   
 }
-.forget a{
-    margin: 5px;
+
+
+.login li {
+    color: blue;
+    padding-left: 10px;
 }

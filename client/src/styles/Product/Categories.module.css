@@ -6,27 +6,24 @@
 
 .Container {
     width: 100%;
-    height: 250px;
+    height: 150px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     border-top: 3px solid gray;
     border-bottom: 1.5px solid gray;
 }
 
 .ImgContainer {
-    height: 100px;
-    width: 100px;
-    background-color: black;
+    height: 130px;
+    width: 110px;
     overflow: hidden;
-    border-radius: 200px;
-}
+    }
 
 .ImgContainer img {
-    
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 80%;
     object-fit: contain;
     cursor: pointer;
 }
@@ -36,4 +33,5 @@
     font-size: 15px;
     text-align: center;
     cursor: pointer;
+    color: brown;
 }

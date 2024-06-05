@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import Styles from "../../../../styles/Home/Navbar/MyAccount/Profile.module.css";
-import { useContext } from 'react';
-import { MyContext } from '../../../.././Context/MyContext';
+import Styles from "../../../styles/Home/MyAccount/Profile.module.css";
+import { useContext , React} from 'react';
+import { MyContext } from '../../../context/MyContext';
 import ClickAwayListener from 'react-click-away-listener';
 
 function Profile() {
