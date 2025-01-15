@@ -5,14 +5,14 @@ import { MyContext } from '../../../context/MyContext';
 import ClickAwayListener from 'react-click-away-listener';
 export default function MyAccount() {
 
-  const { setIsProfile, setIsOrder, setIsMyaccount } = useContext(MyContext);
+  const { setIsProfile,  setIsOrderstatus, setIsMyaccount } = useContext(MyContext);
   
 
   return (
     <ClickAwayListener onClickAway={()=>{
       setIsMyaccount(false)
       setIsProfile(false)
-      setIsOrder(false)
+      setIsOrderstatus(false)
     }}>
     <div
       className={Styles.Container}>
@@ -35,7 +35,7 @@ export default function MyAccount() {
 
           <div className={Styles.Order}>
             <li>
-              <Link onClick={() => setIsOrder(p => !p)}>
+              <Link onClick={() =>  setIsOrderstatus(p => !p)}>
                 Your Order
               </Link>
             </li>

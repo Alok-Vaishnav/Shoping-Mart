@@ -1,0 +1,13 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.mainbox{
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    top: 7%;
+    background-color: purple;
+}

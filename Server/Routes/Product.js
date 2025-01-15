@@ -1,4 +1,4 @@
-import express, { Router } from "express";
+import express from "express";
 import { AllProducts, Search, TopProducts } from "../controller/Product.js";
 
 const router = express.Router();

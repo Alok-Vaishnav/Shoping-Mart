@@ -6,15 +6,14 @@ export default function Context({
  }) {
     const [IsSignup, setIsSignup] = useState(false);
     const [IsMyaccount, setIsMyaccount] = useState(false);
-    const [IsProfile, setIsProfile] = useState(false)
-    const [IsOrder, setIsOrder] = useState(false)
-    const [IsCategory, setIsCategory] = useState(false);
-    const [IsmyProducts, setIsmyProducts] = useState(false)
+    const [IsProfile, setIsProfile] = useState(false);
+    const [IsOrderstatus, setIsOrderstatus] = useState(false);
+    const[Iscart,setIsCart]=useState(false);
 
     return (
 
         <>
-            <MyContext.Provider value={{ IsSignup, setIsSignup,IsMyaccount, setIsMyaccount,IsCategory,  IsProfile, setIsProfile, IsOrder, setIsOrder, IsmyProducts, setIsmyProducts,setIsCategory}}>
+            <MyContext.Provider value={{ IsSignup, setIsSignup,IsMyaccount, setIsMyaccount,  IsProfile, setIsProfile, IsOrderstatus, setIsOrderstatus,Iscart,setIsCart}}>
                 {children}
             </MyContext.Provider>
         </>
