@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import ProductCard from './ProductCard';
-import { MyContext } from '../../context/MyContext';
-import Styles from '../../styles/Product/ProductCard.module.css';
+import { MyContext } from '../../Context/MyContext';
 
 function TopProduct() {
 
@@ -36,7 +35,7 @@ function TopProduct() {
 
 
   return (
-    <div className={Styles.MapContainer}>
+    <div className="w-screen flex items-center justify-center flex-wrap shrink-0 gap-[10px] md:gap-[15px] lg:gap-5 p-[5px] md:p-[10px]">
       {topProducts && topProducts.map((product) => (
         <ProductCard
           key={product.id}

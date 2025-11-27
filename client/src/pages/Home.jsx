@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { MyContext } from '../context/MyContext.jsx'
+import { MyContext } from '../Context/MyContext.jsx'
 import Navbar from '../components/Home/Navbar.jsx'
 import Slide from '../components/Home/Slide.jsx'
 import Authbox from '../components/Auth/Authbox.jsx'
@@ -8,11 +8,12 @@ import Profile from '../components/Home/MyAccount/Profile.jsx'
 import Orderstates from "../components/Home/MyAccount/Orderstates.jsx"
 import Categories from '../components/Product/Categories.jsx'
 import Product from '../components/Product/Product.jsx'
+import ProductCard from '../components/Product/ProductCard.jsx'
 import Footer from "../components/Home/Footer.jsx"
 import CartBox from '../components/Home/Cart/CartBox.jsx'
 
 function Home() {
-  const { IsMyaccount, IsProfile, IsOrderstatus,Iscart } = useContext(MyContext);
+  const { IsMyaccount, IsProfile, IsOrderstatus, Iscart, setIsCart } = useContext(MyContext);
 
   return (
     <>
@@ -23,9 +24,19 @@ function Home() {
         {(IsMyaccount && !localStorage.getItem("User")) && <Authbox />}
         {IsProfile && <Profile />}
         {IsOrderstatus && <Orderstates/>}
-        {Iscart && <CartBox/>}
+        
+        {/* Cart with backdrop overlay */}
+        {Iscart && (
+          <>
+            <div 
+              className="fixed inset-0 bg-black bg-opacity-50 z-[99998] transition-opacity duration-300"
+              onClick={() => setIsCart(false)}
+            ></div>
+            <CartBox/>
+          </>
+        )}
+        
         <Categories />
-        {/* <ProductCard/> */}
         <Product />
 
         <Footer />

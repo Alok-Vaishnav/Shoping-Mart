@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { MyContext } from '../../context/MyContext';
+import { MyContext } from '../../Context/MyContext';
 import Signup from './Signup';
 import Login from './Login';
 

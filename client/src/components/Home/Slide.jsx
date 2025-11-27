@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Style from "../../styles/Home/Slide.module.css"
 import Image1 from "../../../src/assets/Image/Image1.jpg"
 import Image2 from "../../../src/assets/Image/Image2.jpg"
 
@@ -27,18 +26,18 @@ export default function Slide() {
     const images = [Image1, Image2]
 
     return (
-        <div className={Style.container}>
-            <div className={Style.Container}>
-                <div className={Style.prev}
+        <div className="h-[300px] md:h-[450px] lg:h-[650px] w-full flex flex-row relative border-t-2 border-gray-500">
+            <div className="h-full w-full flex flex-row">
+                <div className="h-[25px] md:h-[30px] w-[25px] md:w-[30px] absolute top-[50%] md:top-[45%] left-[1%] md:left-[2%] transition-all duration-100 ease-in cursor-pointer bg-white rounded-full flex justify-center items-center text-black hover:bg-gray-500 hover:transition-all hover:duration-200 hover:ease-in"
                     onClick={handlePrev}>
                     <i className="fa-solid fa-chevron-left"></i>
 
                 </div>
 
-                <div className={Style.SlidePanel}>
-                    <img src={images[index]} alt='ads' />
+                <div className="h-full w-full flex flex-row">
+                    <img src={images[index]} alt='ads' className="w-full h-full object-cover" />
                 </div>
-                <div className={Style.next}
+                <div className="absolute h-[25px] md:h-[30px] w-[25px] md:w-[30px] top-[50%] md:top-[45%] right-[1%] md:right-[2%] transition-all duration-100 ease-in cursor-pointer bg-white rounded-full flex justify-center items-center text-black hover:bg-gray-500 hover:transition-all hover:duration-200 hover:ease-in"
                     onClick={handleNext}
                 ><i className="fa-solid fa-chevron-right"></i></div>
             </div>

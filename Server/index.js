@@ -6,7 +6,7 @@ import Auth from "./Routes/Auth.js"
 import Products from "./Routes/Product.js"
 
 dotenv.config();
-const port = process.env.REACT_APP_SERVER_PORT;
+const port = process.env.PORT || process.env.REACT_APP_SERVER_PORT || 9000;
 
 try {
   const app = express();
