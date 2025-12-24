@@ -35,7 +35,7 @@ export default function Slide() {
                 </div>
 
                 <div className="h-full w-full flex flex-row">
-                    <img src={images[index]} alt='ads' className="w-full h-full object-cover" />
+                    <img src={images[index]} alt={`Promotional slide ${index + 1}`} className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute h-[25px] md:h-[30px] w-[25px] md:w-[30px] top-[50%] md:top-[45%] right-[1%] md:right-[2%] transition-all duration-100 ease-in cursor-pointer bg-white rounded-full flex justify-center items-center text-black hover:bg-gray-500 hover:transition-all hover:duration-200 hover:ease-in"
                     onClick={handleNext}

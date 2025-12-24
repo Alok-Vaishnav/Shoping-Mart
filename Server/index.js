@@ -6,28 +6,48 @@ import Auth from "./Routes/Auth.js"
 import Products from "./Routes/Product.js"
 
 dotenv.config();
-const port = process.env.PORT || process.env.REACT_APP_SERVER_PORT || 9000;
+const port = process.env.PORT || 5000;
 
-try {
-  const app = express();
+const startServer = async () => {
+  try {
+    const app = express();
 
-  app.use(express.json());
-  app.use(cors());
-  await connentTOdb();
-
-  //Router
-  app.use("/auth", Auth); 
-  app.use("/products", Products);
-
-
-
-
-  app.get("/", (req, res) => {
-    res.send("healthy");
-  });
-
-  app.listen(port, () => console.log("Server started" ,{port}));
+    app.use(express.json());
+    app.use(cors());
     
-} catch (error) {
-  console.log(error);
-}
+    // Connect to database (skip only when SKIP_DB=true)
+    if (process.env.SKIP_DB === 'true') {
+      console.log('Skipping DB connect because SKIP_DB=true');
+    } else {
+      await connentTOdb();
+    }
+
+    // Routes
+    app.use("/auth", Auth); 
+    app.use("/products", Products);
+
+    // Health check
+    app.get("/", (req, res) => {
+      res.send("Server is healthy ✅");
+    });
+
+    // 404 handler
+    app.use("*", (req, res) => {
+      res.status(404).json({ 
+        success: false, 
+        message: "Route not found" 
+      });
+    });
+
+    // Start server
+    app.listen(port, () => {
+      console.log(`✅ Server started on port ${port}`);
+    });
+
+  } catch (error) {
+    console.error("❌ Server startup error:", error);
+    process.exit(1);
+  }
+};
+
+startServer();

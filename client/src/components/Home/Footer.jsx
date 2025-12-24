@@ -35,16 +35,16 @@ function Footer() {
           
           {/* Social Icons */}
           <div className="flex gap-4">
-            <a href="#" className="text-gray-400 transition-colors hover:text-gray-600" aria-label="Facebook">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-colors hover:text-gray-600" aria-label="Facebook">
               <i className="fa-brands fa-facebook text-lg"></i>
             </a>
-            <a href="#" className="text-gray-400 transition-colors hover:text-gray-600" aria-label="Twitter">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-colors hover:text-gray-600" aria-label="Twitter">
               <i className="fa-brands fa-twitter text-lg"></i>
             </a>
-            <a href="#" className="text-gray-400 transition-colors hover:text-gray-600" aria-label="Instagram">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-colors hover:text-gray-600" aria-label="Instagram">
               <i className="fa-brands fa-instagram text-lg"></i>
             </a>
-            <a href="#" className="text-gray-400 transition-colors hover:text-gray-600" aria-label="LinkedIn">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-colors hover:text-gray-600" aria-label="LinkedIn">
               <i className="fa-brands fa-linkedin text-lg"></i>
             </a>
           </div>

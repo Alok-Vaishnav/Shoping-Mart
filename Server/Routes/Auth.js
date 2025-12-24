@@ -1,14 +1,10 @@
 import express from "express";
-import { loginUser, signupUser } from "../controller/Auth.js";
+import { loginUser, signupUser, saveAddress } from "../controller/Auth.js";
 
 const router = express.Router();
 
-try {
-    router.post("/login", loginUser);
-    router.post("/signup", signupUser);
-
-} catch (error) {
-    console.log("Internal server error at auth route 🔴 ", error);
-}
+router.post("/login", loginUser);
+router.post("/signup", signupUser);
+router.post("/address", saveAddress);
 
 export default router;
