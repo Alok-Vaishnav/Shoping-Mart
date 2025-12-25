@@ -13,7 +13,21 @@ const startServer = async () => {
     const app = express();
 
     app.use(express.json());
-    app.use(cors());
+    // Configure CORS: allow specific origins if ALLOWED_ORIGINS is set, else allow all
+    const allowed = process.env.ALLOWED_ORIGINS?.split(",").map(s => s.trim()).filter(Boolean);
+    if (allowed && allowed.length > 0) {
+      app.use(cors({
+        origin: (origin, callback) => {
+          if (!origin) return callback(null, true); // allow same-origin or curl
+          if (allowed.includes(origin)) return callback(null, true);
+          return callback(new Error("Not allowed by CORS"));
+        }
+      }));
+      console.log("CORS restricted to:", allowed);
+    } else {
+      app.use(cors());
+      console.log("CORS open: no ALLOWED_ORIGINS set");
+    }
     
     // Connect to database (skip only when SKIP_DB=true)
     if (process.env.SKIP_DB === 'true') {
